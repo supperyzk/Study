@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>测试</title>
+</head>
+<span>1111</span>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+  $.ajax({
+    url: '/api/posts',
+    type: 'GET',
+    dataType: 'json',
+    success: function(data) {
+        console.log(data);
+    }
+});
+</script>
+<body>
+</body>
+
+</html>
