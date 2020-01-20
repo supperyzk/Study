@@ -1,15 +1,15 @@
 <template>
-   <div class="header"> 
-       header
+   <div class="headers"> 
+       <span>{{ header }}</span>
    </div>
 </template>
 
 <script>
 export default {
-   name:'header',
+   name:'Header',
    data(){
        return{
-           
+           header:'header'
        }
    }
 }
