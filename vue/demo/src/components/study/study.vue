@@ -4,7 +4,7 @@
       <br>
       <input type="text" v-model="msg">
       <br>
-      <div v-for="arrs in arr">
+      <div v-for="arrs in arr" :key="arrs.id">
           <span>{{ arrs }}</span>
       </div>
       <br>
@@ -23,6 +23,10 @@
            <ul v-for="(item,index) in myData" :key="index">
                <li @click="sc(index)">{{item.name}} {{ item.age }} </li>
            </ul>
+      </div>
+      <br>
+      <div @click="mone()">
+        <button @click.stop="mtwo()">冒泡</button>
       </div>
    </div>
 </template>
@@ -57,7 +61,13 @@ export default {
         this.myage = '';
     },
     sc:function(item){
-        this.myData.splice(item,1)
+        this.myData.splice(item,1);
+    },
+    mone:function(){
+        alert('1')
+    },
+    mtwo:function(){
+        alert('2');
     }
   }
 }
